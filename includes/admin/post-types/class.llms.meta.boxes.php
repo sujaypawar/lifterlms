@@ -63,6 +63,7 @@ class LLMS_Admin_Meta_Boxes {
 
 		// quizzes
 		new LLMS_Meta_Box_Quiz();
+		new LLMS_Meta_Box_Quiz_Builder();
 		new LLMS_Meta_Box_Quiz_Questions();
 
 		// vouchers

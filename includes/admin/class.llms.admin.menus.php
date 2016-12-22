@@ -67,15 +67,6 @@ class LLMS_Admin_Menus {
 	}
 
 	/**
-	 * Output the HTLM for admin settings screens
-	 * @return void
-	 */
-	public function settings_page_init() {
-		include_once( 'class.llms.admin.settings.php' );
-		LLMS_Admin_Settings::output();
-	}
-
-	/**
 	 * Output the HTML for the reporting screens
 	 * @return   void
 	 * @since    3.2.0
@@ -85,6 +76,15 @@ class LLMS_Admin_Menus {
 		require_once 'reporting/class.llms.admin.reporting.php';
 		$gb = new LLMS_Admin_Reporting();
 		$gb->output();
+	}
+
+	/**
+	 * Output the HTLM for admin settings screens
+	 * @return void
+	 */
+	public function settings_page_init() {
+		include_once( 'class.llms.admin.settings.php' );
+		LLMS_Admin_Settings::output();
 	}
 
 	/**
