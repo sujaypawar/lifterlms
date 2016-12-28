@@ -816,7 +816,7 @@ class LLMS_Post_Types {
 							'menu_name'				=> _x( 'Quizzes', 'Admin menu name', 'lifterlms' ),
 						),
 					'description' 			=> __( 'This is where you can view all of the quizzes.', 'lifterlms' ),
-					'public' 				=> true,
+					'public' 				=> false,
 					'show_ui' 				=> ( current_user_can( apply_filters( 'lifterlms_admin_courses_access', 'manage_options' ) ) ) ? true : false,
 					'map_meta_cap'			=> true,
 					'publicly_queryable' 	=> true,
@@ -826,7 +826,8 @@ class LLMS_Post_Types {
 					'rewrite' 				=> $quiz_permalink ? array( 'slug' => untrailingslashit( $quiz_permalink ), 'with_front' => false, 'feeds' => true ) : false,
 					'show_in_nav_menus' 	=> false,
 					'query_var' 			=> true,
-					'supports' 				=> array( 'title', 'editor', 'author', 'custom-fields' ),
+					// 'supports' 				=> array( 'title', 'editor', 'author', 'custom-fields' ),
+					'supports' 				=> array( '' ),
 				)
 			)
 		);

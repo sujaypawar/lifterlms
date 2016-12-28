@@ -191,8 +191,12 @@ class LLMS_Admin_Assets {
 				wp_enqueue_script( 'llms-metabox-single-question', plugins_url( '/assets/js/llms-metabox-single-question' . LLMS_Admin_Assets::$min . '.js', LLMS_PLUGIN_FILE ), array( 'jquery' ), '', true );
 			}
 			if ( 'llms_quiz' == $post_type ) {
+
 				wp_enqueue_script( 'llms-select2' );
 				wp_enqueue_script( 'llms-metabox-quiz-builder', plugins_url( '/assets/js/llms-metabox-quiz-builder' . LLMS_Admin_Assets::$min . '.js', LLMS_PLUGIN_FILE ), array( 'jquery', 'llms-select2' ), '', true );
+
+				wp_enqueue_script( 'llms-metabox-quiz-builder-new', plugins_url( '/assets/js/llms-metabox-quiz-builder-new' . LLMS_Admin_Assets::$min . '.js', LLMS_PLUGIN_FILE ), array( 'jquery', 'backbone', 'underscore' ), '', true );
+
 			}
 			if ( 'llms_voucher' == $post_type ) {
 

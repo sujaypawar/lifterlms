@@ -62,9 +62,9 @@ class LLMS_Admin_Meta_Boxes {
 		new LLMS_Meta_Box_Order_Notes();
 
 		// quizzes
-		new LLMS_Meta_Box_Quiz();
+		// new LLMS_Meta_Box_Quiz();
 		new LLMS_Meta_Box_Quiz_Builder();
-		new LLMS_Meta_Box_Quiz_Questions();
+		// new LLMS_Meta_Box_Quiz_Questions();
 
 		// vouchers
 		new LLMS_Meta_Box_Voucher();
@@ -187,12 +187,17 @@ class LLMS_Admin_Meta_Boxes {
 		remove_meta_box( 'commentstatusdiv', 'llms_order', 'normal' );
 		remove_meta_box( 'commentsdiv', 'llms_order', 'normal' );
 		remove_meta_box( 'slugdiv', 'llms_order', 'normal' );
+
 		// remove the default submit box in favor of our custom box
 		remove_meta_box( 'submitdiv', 'llms_order', 'side' );
 
 		// remove some defaults from the course
 		remove_meta_box( 'postexcerpt', 'course', 'normal' );
 		remove_meta_box( 'tagsdiv-course_difficulty','course','side' );
+
+		// remove some defaults from quizzes
+		remove_meta_box( 'slugdiv', 'llms_quiz', 'normal' );
+		remove_meta_box( 'submitdiv', 'llms_quiz', 'side' );
 
 	}
 

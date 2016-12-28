@@ -16,7 +16,7 @@ class LLMS_Meta_Box_Quiz_Builder extends LLMS_Admin_Metabox {
 		$this->screens = array(
 			'llms_quiz',
 		);
-		$this->priority = 'high';
+		$this->priority = 'default';
 
 	}
 
@@ -45,7 +45,24 @@ class LLMS_Meta_Box_Quiz_Builder extends LLMS_Admin_Metabox {
 	 */
 	public function output() {
 		?>
+		<div id="llms-quiz-app">
 
+			<header>
+				<button class="llms-button-secondary small tester" type="button" value="multiple-single"><?php _e( 'Multiple Choice (Single)', 'lifterlms' ); ?></button>
+				<button class="llms-button-secondary small tester" type="button" value="multiple"><?php _e( 'Multiple Choice (Multiple)', 'lifterlms' ); ?></button>
+				<button class="llms-button-secondary small tester" type="button" value="true-false"><?php _e( 'True / False', 'lifterlms' ); ?></button>
+			</header>
+
+			<section id="llms-quiz-questions-list"></section>
+
+		</div>
+
+		<script type="text/template" id="llms-question-template">
+			<div class="view">
+				<label><%- title %></label>
+				<a class="destroy"></a>
+			</div>
+		</script>
 		<?php
 	}
 
