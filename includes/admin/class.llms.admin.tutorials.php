@@ -185,126 +185,139 @@ class LLMS_Admin_Tutorials {
 			// 		),
 			// 	),
 			// ),
-			'access_plans' => array(
+			// 'access_plans' => array(
+			// 	'before_next'  => array(
+			// 		'target' => '#llms-new-access-plan',
+			// 		'event'  => 'click',
+			// 	),
+			// 	'target'       => '#llms-new-access-plan',
+			// 	'next'         => 'access_plans_title',
+			// 	'next_trigger' => array(
+			// 		'target' => '#llms-new-access-plan',
+			// 		'event'  => 'click',
+			// 	),
+			// 	'options'      => array(
+			// 		'content'  => '<h3>' . esc_html__( 'Sell Your Course', 'lifterlms' ) . '</h3>' .
+			// 					   '<p>' . esc_html__( 'Access plans allow you to create flexible pricing plans students can use to gain access to your course.', 'lifterlms' ) . '</p>' .
+			// 					   '<p>' . esc_html__( 'You can create up to six plans per course and they will be displayed like a pricing table when visitors visit your course.', 'lifterlms' ) . '</p>',
+			// 		'position' => array(
+			// 			'edge'  => 'top',
+			// 			'align' => 'left',
+			// 		),
+			// 	),
+			// ),
+			// 'access_plans_title' => array(
+			// 	'target'       => 'input[name="_llms_plans[1][title]"]',
+			// 	'next'         => 'access_plans_button',
+			// 	'next_trigger' => array(
+			// 		'target' => 'input[name="_llms_plans[1][title]"]',
+			// 		'event'  => 'input',
+			// 	),
+			// 	'options'      => array(
+			// 		'content'  => '<h3>' . esc_html__( 'Give your plan a name', 'lifterlms' ) . '</h3>' .
+			// 					   '<p>' . esc_html__( 'Like your course, each access plan should have a great name!', 'lifterlms' ) . '</p>',
+			// 		'position' => array(
+			// 			'edge'  => 'bottom',
+			// 			'align' => 'left',
+			// 		),
+			// 	),
+			// ),
+			// 'access_plans_button' => array(
+			// 	'target'       => 'input[name="_llms_plans[1][enroll_text]"]',
+			// 	'next'         => 'access_plans_price',
+			// 	'next_trigger' => array(
+			// 		'target' => 'input[name="_llms_plans[1][enroll_text]"]',
+			// 		'event'  => 'input',
+			// 	),
+			// 	'options'      => array(
+			// 		'content'  => '<h3>' . esc_html__( 'Customize the button text', 'lifterlms' ) . '</h3>' .
+			// 					   '<p>' . esc_html__( 'You can create a unique call to action for each plan using the Enroll Text setting.', 'lifterlms' ) . '</p>',
+			// 		'position' => array(
+			// 			'edge'  => 'bottom',
+			// 			'align' => 'left',
+			// 		),
+			// 	),
+			// ),
+			// 'access_plans_price' => array(
+			// 	'target'       => 'input[name="_llms_plans[1][price]"]',
+			// 	'next'         => 'access_plans_frequency',
+			// 	'next_trigger' => array(
+			// 		'target' => 'input[name="_llms_plans[1][price]"]',
+			// 		'event'  => 'input',
+			// 	),
+			// 	'options'      => array(
+			// 		'content'  => '<h3>' . esc_html__( 'Set a price', 'lifterlms' ) . '</h3>' .
+			// 					   '<p>' . esc_html__( 'Here you can configure the price of your access plan.', 'lifterlms' ) . '</p>',
+			// 		'position' => array(
+			// 			'edge'  => 'bottom',
+			// 			'align' => 'left',
+			// 		),
+			// 	),
+			// ),
+			// 'access_plans_frequency' => array(
+			// 	'target'       => 'select[name="_llms_plans[1][frequency]"]',
+			// 	'next'         => 'access_plans_exipration',
+			// 	'next_trigger' => array(),
+			// 	'options'      => array(
+			// 		'content'  => '<h3>' . esc_html__( 'Subscribe or pay once?', 'lifterlms' ) . '</h3>' .
+			// 					   '<p>' . esc_html__( 'By changing the access plan frequency you can create recurring access plans that bill your student on a schedule.', 'lifterlms' ) . '</p>' .
+			// 					   '<p>' . esc_html__( 'Please note that not all LifterLMS Payment gateways support recurring payments!', 'lifterlms' ) . '</p>',
+			// 		'position' => array(
+			// 			'edge'  => 'bottom',
+			// 			'align' => 'left',
+			// 		),
+			// 	),
+			// ),
+			// 'access_plans_exipration' => array(
+			// 	'before_next'  => array(
+			// 		'target' => '#llms-outline-add',
+			// 		'event'  => 'click',
+			// 	),
+			// 	'target'       => 'select[name="_llms_plans[1][access_expiration]"]',
+			// 	'next'         => 'outline_start',
+			// 	'next_trigger' => array(),
+			// 	'options'      => array(
+			// 		'content'  => '<h3>' . esc_html__( 'Determine length of access', 'lifterlms' ) . '</h3>' .
+			// 					   '<p>' . esc_html__( 'Configure how long a student can access the course once they have enrolled or subscrpibed.', 'lifterlms' ) . '</p>' .
+			// 					   '<p>' . esc_html__( 'A recurring access plan with lifetime access will lose access if they miss a payment!', 'lifterlms' ) . '</p>',
+			// 		'position' => array(
+			// 			'edge'  => 'bottom',
+			// 			'align' => 'left',
+			// 		),
+			// 	),
+			// ),
+			'save' => array(
 				'before_next'  => array(
-					'target' => '#llms-new-access-plan',
+					'target' => '#save-post',
 					'event'  => 'click',
 				),
-				'target'       => '#llms-new-access-plan',
-				'next'         => 'access_plans_title',
-				'next_trigger' => array(
-					'target' => '#llms-new-access-plan',
-					'event'  => 'click',
-				),
-				'options'      => array(
-					'content'  => '<h3>' . esc_html__( 'Sell Your Course', 'lifterlms' ) . '</h3>' .
-								   '<p>' . esc_html__( 'Access plans allow you to create flexible pricing plans students can use to gain access to your course.', 'lifterlms' ) . '</p>' .
-								   '<p>' . esc_html__( 'You can create up to six plans per course and they will be displayed like a pricing table when visitors visit your course.', 'lifterlms' ) . '</p>',
-					'position' => array(
-						'edge'  => 'top',
-						'align' => 'left',
-					),
-				),
-			),
-			'access_plans_title' => array(
-				'target'       => 'input[name="_llms_plans[1][title]"]',
-				'next'         => 'access_plans_button',
-				'next_trigger' => array(
-					'target' => 'input[name="_llms_plans[1][title]"]',
-					'event'  => 'input',
-				),
-				'options'      => array(
-					'content'  => '<h3>' . esc_html__( 'Give your plan a name', 'lifterlms' ) . '</h3>' .
-								   '<p>' . esc_html__( 'Like your course, each access plan should have a great name!', 'lifterlms' ) . '</p>',
-					'position' => array(
-						'edge'  => 'bottom',
-						'align' => 'left',
-					),
-				),
-			),
-			'access_plans_button' => array(
-				'target'       => 'input[name="_llms_plans[1][enroll_text]"]',
-				'next'         => 'access_plans_price',
-				'next_trigger' => array(
-					'target' => 'input[name="_llms_plans[1][enroll_text]"]',
-					'event'  => 'input',
-				),
-				'options'      => array(
-					'content'  => '<h3>' . esc_html__( 'Customize the button text', 'lifterlms' ) . '</h3>' .
-								   '<p>' . esc_html__( 'You can create a unique call to action for each plan using the Enroll Text setting.', 'lifterlms' ) . '</p>',
-					'position' => array(
-						'edge'  => 'bottom',
-						'align' => 'left',
-					),
-				),
-			),
-			'access_plans_price' => array(
-				'target'       => 'input[name="_llms_plans[1][price]"]',
-				'next'         => 'access_plans_frequency',
-				'next_trigger' => array(
-					'target' => 'input[name="_llms_plans[1][price]"]',
-					'event'  => 'input',
-				),
-				'options'      => array(
-					'content'  => '<h3>' . esc_html__( 'Set a price', 'lifterlms' ) . '</h3>' .
-								   '<p>' . esc_html__( 'Here you can configure the price of your access plan.', 'lifterlms' ) . '</p>',
-					'position' => array(
-						'edge'  => 'bottom',
-						'align' => 'left',
-					),
-				),
-			),
-			'access_plans_frequency' => array(
-				'target'       => 'select[name="_llms_plans[1][frequency]"]',
-				'next'         => 'access_plans_exipration',
-				'next_trigger' => array(),
-				'options'      => array(
-					'content'  => '<h3>' . esc_html__( 'Subscribe or pay once?', 'lifterlms' ) . '</h3>' .
-								   '<p>' . esc_html__( 'By changing the access plan frequency you can create recurring access plans that bill your student on a schedule.', 'lifterlms' ) . '</p>' .
-								   '<p>' . esc_html__( 'Please note that not all LifterLMS Payment gateways support recurring payments!', 'lifterlms' ) . '</p>',
-					'position' => array(
-						'edge'  => 'bottom',
-						'align' => 'left',
-					),
-				),
-			),
-			'access_plans_exipration' => array(
-				'before_next'  => array(
-					'target' => '#llms-outline-add',
-					'event'  => 'click',
-				),
-				'target'       => 'select[name="_llms_plans[1][access_expiration]"]',
-				'next'         => 'outline_start',
-				'next_trigger' => array(),
-				'options'      => array(
-					'content'  => '<h3>' . esc_html__( 'Detemine length of access', 'lifterlms' ) . '</h3>' .
-								   '<p>' . esc_html__( 'Configure how long a student can access the course once they have enrolled or subscrpibed.', 'lifterlms' ) . '</p>' .
-								   '<p>' . esc_html__( 'A recurring access plan with lifetime access will lose access if they miss a payment!', 'lifterlms' ) . '</p>',
-					'position' => array(
-						'edge'  => 'bottom',
-						'align' => 'left',
-					),
-				),
-			),
-			'outline_start' => array(
-				'before_next'  => array(
-					'target' => '#llms-outline-add',
-					'event'  => 'click',
-				),
-				'target'       => '#llms-outline-add',
+				'target'       => '#minor-publishing-actions',
 				'next'         => '',
 				'next_trigger' => array(),
 				'options'      => array(
-					'content'  => '<h3>' . esc_html__( 'Outline Your Course', 'lifterlms' ) . '</h3>' .
-								   '<p>' . esc_html__( 'Using the course outline, you can add sections and lessons to your course.', 'lifterlms' ) . '</p>' .
-								   '<p>' . esc_html__( 'Sections only have a title and group lessons within a course and they can be used to trigger engagements when completed.', 'lifterlms' ) . '</p>' .
-								   '<p>' . esc_html__( 'Lessons are the body of your course and have their content, settings, and optional restrictions.', 'lifterlms' ) . '</p>',
+					'content'  => '<h3>' . esc_html__( 'Save your work!', 'lifterlms' ) . '</h3>' .
+								   '<p>' . esc_html__( 'Before you can do anything else you\'ll have to save your course as a draft.', 'lifterlms' ) . '</p>',
 					'position' => array(
-						'edge'  => 'top',
-						'align' => 'left',
+						'edge'  => 'right',
+						'align' => 'center',
 					),
 				),
 			),
+			// 'outline_start' => array(
+			// 	'target'       => '#llms-outline-add',
+			// 	'next'         => '',
+			// 	'next_trigger' => array(),
+			// 	'options'      => array(
+			// 		'content'  => '<h3>' . esc_html__( 'Outline Your Course', 'lifterlms' ) . '</h3>' .
+			// 					   '<p>' . esc_html__( 'Using the course outline, you can add sections and lessons to your course.', 'lifterlms' ) . '</p>' .
+			// 					   '<p>' . esc_html__( 'Sections only have a title and group lessons within a course and they can be used to trigger engagements when completed.', 'lifterlms' ) . '</p>' .
+			// 					   '<p>' . esc_html__( 'Lessons are the body of your course and have their content, settings, and optional restrictions.', 'lifterlms' ) . '</p>',
+			// 		'position' => array(
+			// 			'edge'  => 'bottom',
+			// 			'align' => 'left',
+			// 		),
+			// 	),
+			// ),
 
 		) );
 
@@ -384,7 +397,7 @@ class LLMS_Admin_Tutorials {
 						},
 						close: function() {
 							if ( pointer.before_next ) {
-								$( pointer.before_next.target ).trigger( pointer.before_next.event );
+								jQuery( pointer.before_next.target ).trigger( pointer.before_next.event );
 							}
 							if ( pointer.next ) {
 								llms_show_pointer( pointer.next );
