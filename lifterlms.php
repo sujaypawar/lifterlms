@@ -193,6 +193,7 @@ final class LifterLMS {
 			include_once 'includes/admin/class.llms.admin.notices.core.php';
 			include_once 'includes/admin/class.llms.admin.post-types.php';
 			include_once 'includes/admin/class.llms.admin.assets.php';
+			include_once 'includes/admin/class.llms.admin.tutorials.php';
 			include_once 'includes/admin/post-types/class.llms.post.tables.php';
 			if ( ! empty( $_GET['page'] ) && 'llms-setup' === $_GET['page'] ) {
 				require_once 'includes/admin/class.llms.admin.setup.wizard.php';

@@ -416,3 +416,17 @@ div[id^="lifterlms-"] .inside {
 		width: 13px;
 	}
 }
+
+.llms-pointer {
+	&.wp-pointer-top .wp-pointer-arrow-inner,
+	&.wp-pointer-undefined .wp-pointer-arrow-inner {
+		border-bottom-color: $color-brand-dark-blue;
+	}
+	h3 {
+		background-color: $color-brand-dark-blue;
+		border-color: $color-brand-dark-blue;
+		&:before {
+			color: $color-brand-dark-blue;
+		}
+	}
+}
