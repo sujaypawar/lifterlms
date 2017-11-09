@@ -7,6 +7,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) { exit; }
 
+
 class LLMS_Generator {
 
 	/**
@@ -93,6 +94,7 @@ class LLMS_Generator {
 		require_once( ABSPATH . 'wp-admin/includes/image.php' );
 
 	}
+
 
 	/**
 	 * Add taxonomy terms to a course
@@ -248,6 +250,7 @@ class LLMS_Generator {
 
 	}
 
+
 	/**
 	 * Create a new access plan
 	 * @param    array     $raw                 Raw Access Plan Data
@@ -327,6 +330,11 @@ class LLMS_Generator {
 		// save the tempid
 		$tempid = $this->store_temp_id( $raw, $course );
 
+
+		// set custom fields
+		$this->set_course_custom_fields($tempid,  $course->get( 'id' ));
+
+
 		// set all metadata
 		foreach ( array_keys( $course->get_properties() ) as $key ) {
 			if ( isset( $raw[ $key ] ) ) {
@@ -338,6 +346,8 @@ class LLMS_Generator {
 		if ( isset( $raw['featured_image'] ) ) {
 			$this->set_featured_image( $raw['featured_image'], $course->get( 'id' ) );
 		}
+
+
 
 		// add terms to our course
 		$terms = array();
@@ -404,6 +414,9 @@ class LLMS_Generator {
 
 		// save the tempid
 		$tempid = $this->store_temp_id( $raw, $lesson );
+
+		// save the lesson tempid (for clone lessons)
+		$this->set_lesson_custom_fields($tempid,  $lesson->get( 'id' ));
 
 		// set featured image
 		if ( isset( $raw['featured_image'] ) ) {
@@ -948,6 +961,31 @@ class LLMS_Generator {
 			}
 		}
 
+	}
+
+	/**
+	 * Clone  courses custom fields
+	 * Clone all custom fields for cources
+	 */
+
+
+	private function set_course_custom_fields($tempid, $post_id ) {
+		$custom_fields = get_post_custom($tempid);
+			foreach ( $custom_fields as $key => $value ) {
+			update_post_meta( $post_id, $key, $value[0], get_post_custom_values($key, $tempid) );
+		}
+	}
+
+
+	/**
+	 * Clone lesson's custom fields
+	 * Clone all custom fields for lessons
+	 */
+	private function set_lesson_custom_fields($tempid, $post_id ) {
+		$custom_fields_lesson = get_post_custom($tempid);
+		foreach ( $custom_fields_lesson as $key => $value ) {
+			update_post_meta( $post_id, $key, $value[0], get_post_custom_values($key, $tempid) );
+		}
 	}
 
 	/**
