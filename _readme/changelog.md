@@ -1,6 +1,12 @@
 == Changelog ==
 
 
+v3.15.0-alpha.1 - 2017-11-01
+--------------------------------
+
++ Replace notifications heartbeat with AJAX calls to notifications REST API endpoints
+
+
 = v3.15.1 - 2017-12-05 =
 ------------------------
 
